@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex Demo</title>
+  <style>
+    .parent {
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    .child:nth-child(1),
+    .flexed {
+      flex: 1;
+      background-color: #e0efe8;
+    }
+
+    .child:nth-child(2) {
+      flex: 2;
+      background-color: #a3e2c5;
+    }
+
+    .child:nth-child(3) {
+      flex: 3;
+      background-color: #4c8dad;
+    }
+
+    .stable {
+      width: 120px;
+      background-color: #e0efe8;
+    }
+
+    .stableMg {
+      width: 150px;
+    }
+
+    .stableMg:nth-child(1) {
+      margin-right: 10px;
+      background-color: #a3e2c5;
+    }
+
+    .stableMg:nth-child(3) {
+      margin-left: 10px;
+      background-color: #4c8dad;
+    }
+  </style>
+</head>
+
+<body>
+  <h3> display: -webkit-flex; display: flex;</h3>
+  <div class="parent">
+    <div class="child">flex: 1</div>
+    <div class="child">flex: 2</div>
+    <div class="child">flex: 3</div>
+  </div>
+  <h5>某一元素为规定尺寸时：</h5>
+  <div class="parent">
+    <div class="stable">{width: 120px;}</div>
+    <div class="child">flex: 2</div>
+    <div class="child">flex: 3</div>
+  </div>
+
+  <h5>带有margin属性的情况：</h5>
+  <div class="parent">
+    <div class="stableMg">{width: 120px; margin-right: 10px;}</div>
+    <div class="flexed">flex: 1</div>
+    <div class="stableMg">{width: 120px; margin-left: 10px;}</div>
+  </div>
+</body>
+
+</html>

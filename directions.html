@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Descriptions for this rep</title>
+</head>
+<h1>What's the Flex</h1>
+<p>Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。</p>
+
+<h2>Basic Demonstration</h2>
+<p>
+  <code>
+    .box { display: flex; }
+  </code>
+  <br/>
+  <code>
+    .box { display: inline-flex; } /* 行内元素的flex布局 */
+  </code>
+  <br/>
+  <code>
+    .box {
+    <br/> display: -webkit-flex; /* safari or other browser engined by webkit */
+    <br/> display: flex;
+    <br/> }
+  </code>
+  <br/>
+  <span>注意，设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。</span>
+</p>
+
+<h2>容器的属性</h2>
+<p>
+  flex-direction /* 决定主轴的方向 */
+  <code>
+    flex-direction: row | row-reverse | column | column-reverse;
+  </code>
+  <br/> flex-wrap /* 如果一条轴线排不下，如何换行 */
+  <code>
+    flex-wrap: no-wrap /* 不换行 */ | wrap | wrap-reverse;
+  </code>
+  <br/> flex-flow /* flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。 */
+  <code>
+    flex-flow: flex-direction | flex-wrap;
+  </code>
+  <br/> justify-content /* 定义了项目在主轴上的对齐方式 */
+  <code>
+    justify-content: flex-start | flex-end | center | space-between | space-around;
+  </code>
+  <br/> align-items /* 定义项目在交叉轴上如何对齐 */
+  <code>
+    align-items: flex-start | flex-end | center | baseline | stretch;
+  </code>
+  <br/> align-content /* 定义了多根轴线的对齐方式，类似word中段落的[行间距]属性 */
+</p>
+
+<h3>for align-content</h3>
+<p style="font-size: 14px;">
+  <span>
+    align-content: stretch;
+    <i style="color: grey;"> 会拉伸容器内每个项目占用的空间，填充方式为给每个项目下方增加空白。</i>
+  </span>
+  <br/>
+  <span>
+    align-content: center;
+    <i style="color: grey;"> 会取消项目之间的空白并把所有项目垂直居中</i>
+  </span>
+  <br/>
+  <span>
+    align-content: flex-start;
+    <i style="color: grey;"> 会取消项目之间的空白，并把项目放在容器顶部</i>
+  </span>
+  <br/>
+  <span>
+    align-content: flex-end;
+    <i style="color: grey;"> 会取消项目之间的空白并把项目放在容器底部</i>
+  </span>
+  <br/>
+  <span>
+    align-content: space-between;
+    <i style="color: grey;"> 使项目在垂直方向两端对齐，即上面的项目对齐容器顶部，最下面一个项目对齐容器底部，留相同间隔在每个项目之间。</i>
+  </span>
+  <br>
+  <span>
+    align-content: space-around;
+    <i style="color: grey;"> 会使每个项目上下位置保留相同长度空白</i>
+  </span>
+</p>
+
+<body>
+
+</body>
+
+</html>
